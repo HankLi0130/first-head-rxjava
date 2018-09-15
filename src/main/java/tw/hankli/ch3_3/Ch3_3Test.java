@@ -9,7 +9,7 @@ public class Ch3_3Test {
     public static void main(String[] args) {
 
         Observable.just(2, 3, 4, 5, 6, 7, 8, 9)
-                .filter(integer -> integer > 5)
+                .filter(integer -> integer > 15)
                 .map(integer -> integer * 10)
                 .subscribe(new Observer<Integer>() {
                     @Override
