@@ -1,22 +1,26 @@
 package tw.hankli.ch4_1;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+
+import java.util.Calendar;
 
 public class Ch4_1Test {
 
     public static void main(String[] args) {
 
-        fromCreate().subscribe(new Observer<Integer>() {
+        fromCreate().subscribe(new Observer<Long>() {
             @Override
             public void onSubscribe(Disposable d) {
                 System.out.println("onSubscribe");
             }
 
             @Override
-            public void onNext(Integer integer) {
-                System.out.println("onNext " + integer);
+            public void onNext(Long along) {
+                System.out.println("onNext " + along);
             }
 
             @Override
@@ -31,22 +35,21 @@ public class Ch4_1Test {
         });
     }
 
-    private static Observable<Integer> fromCreate() {
+    public static Observable<Long> fromCreate() {
+        return Observable.create(
+                new ObservableOnSubscribe<Long>() {
+                    @Override
+                    public void subscribe(ObservableEmitter<Long> emitter) throws Exception {
 
-        return Observable.create(emitter -> {
+                        for (int i = 0; i < 3; i++) {
 
-            try {
-                for (int i = 0; i < 5; i++) {
-                    if (!emitter.isDisposed()) {
-                        emitter.onNext(i);
+                            if (!emitter.isDisposed()) {
+                                emitter.onNext(Calendar.getInstance().getTimeInMillis());
+                            }
+                        }
+
+                        emitter.onComplete();
                     }
-                }
-
-                emitter.onComplete();
-
-            } catch (Exception e) {
-                emitter.onError(e);
-            }
-        });
+                });
     }
 }
