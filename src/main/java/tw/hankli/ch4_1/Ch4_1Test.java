@@ -36,8 +36,7 @@ public class Ch4_1Test {
     }
 
     public static Observable<Long> fromCreate() {
-        return Observable.create(
-                new ObservableOnSubscribe<Long>() {
+        return Observable.create(new ObservableOnSubscribe<Long>() {
                     @Override
                     public void subscribe(ObservableEmitter<Long> emitter) throws Exception {
 
