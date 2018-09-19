@@ -3,6 +3,7 @@ package tw.hankli.ch4_4;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ public class FromTest {
 
     public static void main(String[] args) {
 
-        fromArray().subscribe(new Observer<Integer>() {
+        fromFuture().subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
                 System.out.println("onSubscribe");
@@ -22,6 +23,7 @@ public class FromTest {
 
             @Override
             public void onNext(Integer integer) {
+                System.out.println("onNext " + Thread.currentThread().getName());
                 System.out.println("onNext " + integer);
             }
 
@@ -35,6 +37,8 @@ public class FromTest {
                 System.out.println("onComplete");
             }
         });
+
+        System.out.println("Main " + Thread.currentThread().getName());
     }
 
     private static Observable<Integer> fromArray() {
@@ -57,7 +61,7 @@ public class FromTest {
 
         service.shutdown();
 
-        return Observable.fromFuture(future);
+        return Observable.fromFuture(future, Schedulers.io());
     }
 
     private static Observable<Integer> fromIterable() {
