@@ -4,7 +4,7 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class Ch4_2Test {
+public class DeferTest {
 
     public static void main(String[] args) {
 

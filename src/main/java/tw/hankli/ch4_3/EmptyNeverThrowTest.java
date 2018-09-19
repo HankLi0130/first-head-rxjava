@@ -4,7 +4,7 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class Ch4_3Test {
+public class EmptyNeverThrowTest {
 
     public static void main(String[] args) {
         fromThrow().subscribe(new Observer<Long>() {
