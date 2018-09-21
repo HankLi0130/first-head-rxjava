@@ -7,7 +7,7 @@ import io.reactivex.disposables.Disposable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-public class Ch4_5Test {
+public class IntervalTest {
 
     public static void main(String[] args) throws InterruptedException {
 
