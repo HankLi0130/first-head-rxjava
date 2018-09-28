@@ -1,25 +1,23 @@
-package tw.hankli.ch5_1;
+package tw.hankli.ch5_2;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Function;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.Callable;
-
-public class BufferTest {
+public class FlatMapTest {
 
     public static void main(String[] args) {
 
-        fromBuffer().subscribe(new Observer<List<Integer>>() {
+        fromFlatMap().subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
                 System.out.println("onSubscribe");
             }
 
             @Override
-            public void onNext(List<Integer> integers) {
+            public void onNext(Integer integers) {
                 System.out.println("onNext " + integers.toString());
             }
 
@@ -33,23 +31,16 @@ public class BufferTest {
                 System.out.println("onComplete");
             }
         });
+
     }
 
-    private static Observable<List<Integer>> fromBuffer() {
+    private static Observable<Integer> fromFlatMap() {
         return Observable.just(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-                .buffer(3, 2, new Callable<List<Integer>>() {
+                .flatMap(new Function<Integer, ObservableSource<Integer>>() {
                     @Override
-                    public List<Integer> call() throws Exception {
-
-                        List<Integer> list = new ArrayList<>();
-
-                        list.add(99);
-                        list.add(98);
-
-                        return list;
+                    public ObservableSource<Integer> apply(Integer integer) throws Exception {
+                        return Observable.just(integer * 10, integer * 100, integer * 1000);
                     }
                 });
     }
 }
-
-
