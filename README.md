@@ -1,6 +1,10 @@
 # Let's RxJava
 
-使用 Java 學習 ReactiveX
+使用 Java 學習 [ReactiveX](http://reactivex.io/)
+
+[RxJava Doc](http://reactivex.io/RxJava/javadoc/)
+
+[RxJava GitHub](https://github.com/ReactiveX/RxJava)
 
 ### Ch1 初見 RxJava
 - [Ch1-1 什麼是RxJava](https://youtu.be/NBx1T3MbL4g)
