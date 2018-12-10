@@ -9,10 +9,10 @@
 - [Ch1-4 在專案安裝RxJava](https://youtu.be/-gsHuw7ac-A)
 
 ### Ch2 RxJava預備知識
-- Ch2-1 設計模式-觀察者
-- Ch2-2 設計模式-迭代器
-- Ch2-3 串流
-- Ch2-4 Lambda表示式
+- [Ch2-1 設計模式-觀察者](https://youtu.be/Nl28hpHyNnw)
+- [Ch2-2 設計模式-迭代器](https://youtu.be/mwHWdYSCcmQ)
+- [Ch2-3 串流](https://youtu.be/4J3lji0WqkU)
+- [Ch2-4 Lambda表示式](https://youtu.be/o0V0m25fjyU)
 
 ### Ch3 認識RxJava
 - Ch3-1 建立一個RxJava Flow
