@@ -19,7 +19,7 @@
 - [Ch2-4 Lambda表示式](https://youtu.be/o0V0m25fjyU)
 
 ### Ch3 認識RxJava
-- [Ch3-1 建立一個RxJava Flow]()
+- [Ch3-1 建立一個RxJava Flow](https://youtu.be/jX3g5adxhAI)
 - [Ch3-2 發生onError的RxJava Flow](https://youtu.be/gMPg-RUproc)
 - [Ch3-3 在RxJava Flow加上操作](https://youtu.be/QKULyLB4I2Q)
 - [Ch3-4 RxJava Flow說明](https://youtu.be/MBgPT-lczEw)
