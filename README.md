@@ -34,3 +34,11 @@
 - [Ch4-7 Range](https://youtu.be/gJeP_kx_iZY)
 - [Ch4-8 Repeat](https://youtu.be/-5MffZWTJfY)
 - [Ch4-9 Timer](https://youtu.be/gyqaHD7WgKc)
+
+### Ch5 認識Operators - Transforming Observables
+- [Ch5-1 Buffer](https://youtu.be/t8IMSqV6HMM)
+- [Ch5-2 FlatMap](https://youtu.be/g27rCK0cmKQ)
+- [Ch5-3 GroupBy](https://youtu.be/vib0hPsAIz0)
+- [Ch5-4 Map](https://youtu.be/s1CkqTkdzI8)
+- [Ch5-5 Scan](https://youtu.be/mlDNu4TAhLI)
+- [Ch5-6 Window](https://youtu.be/UufBP7H9z9Q)
