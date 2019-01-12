@@ -42,3 +42,7 @@
 - [Ch5-4 Map](https://youtu.be/s1CkqTkdzI8)
 - [Ch5-5 Scan](https://youtu.be/mlDNu4TAhLI)
 - [Ch5-6 Window](https://youtu.be/UufBP7H9z9Q)
+
+### Ch6 認識Operators - Filtering Observables
+- [Ch6-1 Debounce](https://youtu.be/jMCcDfRSObU)
+- [Ch6-2 Distinct](https://youtu.be/-m81oEIxZug)
