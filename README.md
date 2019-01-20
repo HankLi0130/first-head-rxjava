@@ -46,3 +46,5 @@
 ### Ch6 認識Operators - Filtering Observables
 - [Ch6-1 Debounce](https://youtu.be/jMCcDfRSObU)
 - [Ch6-2 Distinct](https://youtu.be/-m81oEIxZug)
+- [Ch6-3 ElementAt](https://youtu.be/SCBmRI8R2t0)
+- [Ch6-4 Filter](https://youtu.be/JFKkE2zMfAQ)
