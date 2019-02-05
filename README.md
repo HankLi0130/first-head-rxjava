@@ -48,3 +48,5 @@
 - [Ch6-2 Distinct](https://youtu.be/-m81oEIxZug)
 - [Ch6-3 ElementAt](https://youtu.be/SCBmRI8R2t0)
 - [Ch6-4 Filter](https://youtu.be/JFKkE2zMfAQ)
+- [Ch6-4 IgnoreElements](https://youtu.be/E4aZi14OOqE)
+- [Ch6-4 Sample](https://youtu.be/eyno_6e3tTE)
