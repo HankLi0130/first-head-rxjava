@@ -50,3 +50,5 @@
 - [Ch6-4 Filter](https://youtu.be/JFKkE2zMfAQ)
 - [Ch6-5 IgnoreElements](https://youtu.be/E4aZi14OOqE)
 - [Ch6-6 Sample](https://youtu.be/eyno_6e3tTE)
+- [Ch6-7 Skip](https://youtu.be/in5rUnvkT3w)
+- [Ch6-8 Take](https://youtu.be/RHjLsU9gPcc)
