@@ -17,7 +17,7 @@ public class RepeatTest {
 
         CountDownLatch latch = new CountDownLatch(1);
 
-        fromRepeat().subscribe(new Observer<Integer>() {
+        fromRepeatWhen().subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
                 System.out.println("onSubscribe");
@@ -63,8 +63,10 @@ public class RepeatTest {
         return JustTest.fromJust().repeatWhen(new Function<Observable<Object>, ObservableSource<?>>() {
             @Override
             public ObservableSource<?> apply(Observable<Object> objectObservable) throws Exception {
-
-                return objectObservable.delay(3, TimeUnit.SECONDS);
+                System.out.println("repeatWhen");
+                return objectObservable
+                        .delay(3, TimeUnit.SECONDS)
+                        .take(1);
             }
         });
     }
