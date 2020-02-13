@@ -8,9 +8,14 @@ import io.reactivex.functions.BooleanSupplier;
 import io.reactivex.functions.Function;
 import tw.hankli.ch4_6.JustTest;
 
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+
 public class RepeatTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+
+        CountDownLatch latch = new CountDownLatch(1);
 
         fromRepeat().subscribe(new Observer<Integer>() {
             @Override
@@ -31,8 +36,10 @@ public class RepeatTest {
             @Override
             public void onComplete() {
                 System.out.println("onComplete");
+                latch.countDown();
             }
         });
+        latch.await();
     }
 
     private static Observable<Integer> fromRepeat() {
@@ -57,12 +64,7 @@ public class RepeatTest {
             @Override
             public ObservableSource<?> apply(Observable<Object> objectObservable) throws Exception {
 
-                return objectObservable.flatMap(new Function<Object, ObservableSource<?>>() {
-                    @Override
-                    public ObservableSource<?> apply(Object o) throws Exception {
-                        return Observable.empty();
-                    }
-                });
+                return objectObservable.delay(3, TimeUnit.SECONDS);
             }
         });
     }
