@@ -8,6 +8,8 @@
 
 [Let's RxJava YouTube 影片](https://www.youtube.com/playlist?list=PLxNG26TpWnSc8MJKnFjdcH7zPoO5RzjRj)
 
+歡迎贊助我的 GitHub，成為我的 [Sponsor](https://github.com/sponsors/HankLi0130)，我會繼續分享更多影片給各位！
+
 ### Ch1 初見 RxJava
 - [Ch1-1 什麼是RxJava](https://youtu.be/NBx1T3MbL4g)
 - [Ch1-2 RxJava基本結構](https://youtu.be/S8i8JtjGZQE)
